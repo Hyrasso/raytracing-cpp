@@ -150,8 +150,10 @@
     <ClInclude Include="Bmpfile.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="DirectionalLight.h" />
+    <ClInclude Include="IntersectionObject3d.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Object3d.h" />
+    <ClInclude Include="PointLight.h" />
     <ClInclude Include="projet.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="Scene.h" />
@@ -164,8 +166,10 @@
     <ClCompile Include="Bmpfile.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="DirectionalLight.cpp" />
+    <ClCompile Include="IntersectionObject3d.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Object3d.cpp" />
+    <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="projet.cpp" />
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Scene.cpp" />

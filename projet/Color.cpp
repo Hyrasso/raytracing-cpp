@@ -41,11 +41,6 @@ unsigned char Colorf::GetBlueAsuchar() const
 	return std::max(0.0, std::min(blue * 255.0, 255.0));
 }
 
-Colorf Colorf::WHITE()
-{
-	return Colorf(1.0, 1.0, 1.0);
-}
-
 std::ostream & operator<<(std::ostream & out, const Colorf & v)
 {
 	out << "(" << v.red << ", " << v.green << ", " << v.blue << ")";

@@ -10,7 +10,7 @@ Sphere::~Sphere()
 {
 }
 
-bool Sphere::Intersect(Ray ray, Vector3& intersection) const
+bool Sphere::Intersect(Ray ray, Intersection& intersection) const
 {
 	// solve for t
 	// point = rayStart + rayDir * t
@@ -26,7 +26,12 @@ bool Sphere::Intersect(Ray ray, Vector3& intersection) const
 		float t2 = (-b + sqrt(delta)) / 2.f;
 		// keep only the closest solution
 		float t = t1 < t2 ? t1 : t2;
-		intersection.set(ray.GetStart() + ray.GetDirection().multiply(t));
+		Vector3 point = ray.GetStart() + ray.GetDirection().multiply(t);
+		intersection = Intersection {
+			point,
+			GetNormal(point),
+			GetColor(point) 
+		};
 		return true;
 	}
 	return false;
